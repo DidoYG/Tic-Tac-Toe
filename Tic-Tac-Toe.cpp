@@ -6,12 +6,6 @@ using namespace std;
 
 vector<char> positions;
 
-void print(){
-    for(int i = 0; i < 9; i++){
-        positions.push_back(' ');
-    }
-}
-
 class Board
 {
 public:
@@ -57,13 +51,16 @@ public:
 };
 
 int main(){
-    print();
     vector<int> player_choice;
     int pos = 0, count = 0, cycle = 0;
     char choice;
     Board board;
     Player p1;
     Player p2;
+
+    for(int i = 0; i < 9; i++){
+        positions.push_back('0' + i + 1);
+    }
 
     while(cycle < 1){
         while(count < 10){
